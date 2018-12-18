@@ -35,8 +35,20 @@ docker-compose build --pull # separate so we can explicitly pull before building
 docker-compose up -d
 docker-compose logs -f learing-jenkins
 ```
+
 ## Building an Image on Every Commit
 
 You have to install TeamCity.VSTest.TestAdapter package to grab tests output.  
 https://stackoverflow.com/a/52236646/54159
+
+## Run image from my-registry
+
+From another computer (other than dev-pc above)! 
+
+`docker run --rm -it -p 8080:80 my-registry:55000/gen:ci-14`  
+=> runs now on localhost:8080
+
+To run another version on the same machine (but different port):  
+`docker run --rm -it -p 8090:80 my-registry:55000/gen:ci-14`  
+=> runs now on localhost:8090
 
