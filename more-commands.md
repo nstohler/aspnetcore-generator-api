@@ -22,7 +22,7 @@ Run the image with
 Clear up some space:  
 `docker image prune`
 
-## Registry: reset registry, clear volume
+### Note: Registry: reset registry, clear volume
 
 From [Implementing a Self-hosted Docker Registry](https://app.pluralsight.com/library/courses/implementing-self-hosted-docker-registry/table-of-contents)
 
@@ -35,5 +35,8 @@ docker-compose build --pull # separate so we can explicitly pull before building
 docker-compose up -d
 docker-compose logs -f learing-jenkins
 ```
+## Building an Image on Every Commit
 
+You have to install TeamCity.VSTest.TestAdapter package to grab tests output.  
+https://stackoverflow.com/a/52236646/54159
 
