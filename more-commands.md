@@ -74,6 +74,11 @@ or
 [Removing All Unused Objects](https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks/#removing-all-unused-objects):  
 `docker system prune`
 
+## Set environment variables in git bash
+
+`export GENERATOR_BUILD_NUMBER=30`  
+`echo ${GENERATOR_BUILD_NUMBER}`
+
 # Links
 
 - [Run Angular in a Docker Container using Multi-Stage builds](https://malcoded.com/posts/angular-docker)
