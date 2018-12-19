@@ -1,9 +1,7 @@
-**/bin/
-**/obj/
+bin/
+obj/
 **/.vs/
 **/.git/
-infra/
-**/global.json
 **/[Dd]ockerfile*
 **/.[Dd]ockerignore*
 **/[Dd]ocker-compose*.yml

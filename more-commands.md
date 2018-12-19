@@ -55,7 +55,14 @@ To run another version on the same machine (but different port):
 `docker run --rm -it -p 8090:80 my-registry:55000/gen:ci-14`  
 => runs now on localhost:8090
 
-## Links
+## Integration tests
+
+Abort when one container is finished, build every time:  
+`docker-compose up --force-recreate --abort-on-container-exit --build`
+
+For integration tests: do not publish ports (only for getting things up and running, then comment out)!
+
+# Links
 
 - [Run Angular in a Docker Container using Multi-Stage builds](https://malcoded.com/posts/angular-docker)
 - [Your Angular apps as Docker containers](https://medium.com/@DenysVuika/your-angular-apps-as-docker-containers-471f570a7f2)
