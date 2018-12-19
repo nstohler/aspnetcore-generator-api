@@ -62,6 +62,18 @@ Abort when one container is finished, build every time:
 
 For integration tests: do not publish ports (only for getting things up and running, then comment out)!
 
+## Bonus commands
+
+[How To Remove Docker Containers, Images, Volumes, and Networks](https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks/)
+
+[Remove all stopped containers](https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks/#remove-all-stopped-containers):  
+`docker container prune`  
+or  
+```docker rm `docker ps -a -q` ```
+
+[Removing All Unused Objects](https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks/#removing-all-unused-objects):  
+`docker system prune`
+
 # Links
 
 - [Run Angular in a Docker Container using Multi-Stage builds](https://malcoded.com/posts/angular-docker)
