@@ -16,6 +16,9 @@ If an entrypoint has been specified, the above command will not work. Use the fo
 or this to override the entrypoint and specify a command:  
 `docker run --rm -it --entrypoint=bash testing -c "ls -alR"`
 
+NGINX image (Angular) shell:
+`docker exec -i -t angular-container sh`
+
 Run the image with  
 `docker run --rm -it -p 8080:80 testing`
 
@@ -52,3 +55,7 @@ To run another version on the same machine (but different port):
 `docker run --rm -it -p 8090:80 my-registry:55000/gen:ci-14`  
 => runs now on localhost:8090
 
+## Links
+
+- [Run Angular in a Docker Container using Multi-Stage builds](https://malcoded.com/posts/angular-docker)
+- [Your Angular apps as Docker containers](https://medium.com/@DenysVuika/your-angular-apps-as-docker-containers-471f570a7f2)
