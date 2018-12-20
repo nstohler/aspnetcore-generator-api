@@ -79,6 +79,28 @@ or
 `export GENERATOR_BUILD_NUMBER=30`  
 `echo ${GENERATOR_BUILD_NUMBER}`
 
+## Docker Swarm on local machine
+
+`docker swarm init`
+
+## Performance testing
+
+Build and store intermediate Dockerfile image:  
+`docker build --target build-env -t perf-web:build-env .`
+
+Check contents (works, cause there is no entry-point defined for this intermediate image):  
+`docker run --rm -it perf-web:build-env`    
+`docker run --rm -it perf-web:build-env bash`
+
+list directly:  
+- Powershell:  
+ `docker run --rm -it perf-web:build-env ls /published`
+- Git Bash:  
+`docker run --rm -it --entrypoint=bash perf-web:build-env -c "ls /published"`
+
+only start the web service from a docker-compose:  
+`docker-compose up --build --force-recreate web`
+
 # Links
 
 - [Run Angular in a Docker Container using Multi-Stage builds](https://malcoded.com/posts/angular-docker)
